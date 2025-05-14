@@ -1,9 +1,12 @@
 ﻿public class ColorChangeChannel
 {
     public delegate void ColorChange();
-    public delegate void CodeScanned(Kid scannedKid);
+    public delegate void KidScanned(Kid scannedKid);
+    public delegate void CodeScanned(string scannedCode);
 
     public ColorChange OnColorChange;
 
-    public CodeScanned OnCodeScanned;
+    public KidScanned OnCodeScanned;
+
+    public CodeScanned OnCodeScannedRaw;
 }

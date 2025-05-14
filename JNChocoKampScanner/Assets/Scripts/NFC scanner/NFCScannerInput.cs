@@ -22,16 +22,18 @@ public class NFCScannerInput : MonoBehaviour
 
     private void Cardreader_CardConnected(object sender, CardreaderEventArgs e)
     {
-        Debug.Log($"card connected!");
         var cardId = e.Card.Id;
+        Channels.ColorChangeChannel.OnCodeScannedRaw?.Invoke(cardId);
         var kid = database.allKids.Find(k => k.Code == e.Card.Id);
+
+        if (kid == null)
+            return;
+
         Channels.ColorChangeChannel.OnCodeScanned?.Invoke(kid);
-        Debug.Log($"card read: {cardId}");
     }
 
     private void Cardreader_CardDisconnected(object sender, CardreaderEventArgs e)
     {
-        Debug.Log($"card disconnected");
     }
 
     private void OnDestroy()
