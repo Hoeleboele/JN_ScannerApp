@@ -8,7 +8,7 @@
 
     public string KidToString()
     {
-        string toreturn = $"{Code},{KidGroupString()},{FirstName},{LastName},{IsCorrectCode}";
+        string toreturn = $"{Code};{KidGroupString()};{FirstName};{LastName};{IsCorrectCode}";
         return toreturn;
     }
 
