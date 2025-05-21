@@ -69,11 +69,6 @@ public enum FeestDagType
     Halloween,
     Valentijn,
     OudEnNieuw,
-    Moederdag,
-    Vaderdag,
     Koningsdag,
-    Bevrijdingsdag,
-    Hemelvaart,
-    Pinksteren,
-    Sinterklaas
+    Carnaval
 }
