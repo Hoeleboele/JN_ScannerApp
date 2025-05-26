@@ -8,7 +8,7 @@
 
     public string KidToString()
     {
-        string toreturn = $"{Code};{KidGroupString()};{FirstName};{LastName};{IsCorrectCode}";
+        string toreturn = $"{Code};{FirstName};{LastName};{IsCorrectCode}";
         return toreturn;
     }
 
@@ -20,10 +20,9 @@
         kid.FirstName = splitKid[1];
         kid.LastName = splitKid[2];
 
-        if (splitKid[3] == "1") { kid.IsCorrectCode = true; }
+        if (splitKid[3] == "1" || splitKid[3].ToLower() == "true") { kid.IsCorrectCode = true; }
         else { kid.IsCorrectCode = false; }
 
-        kid.Group = kidGroupFromBarcode(kid.Code);
         return kid;
     }
 

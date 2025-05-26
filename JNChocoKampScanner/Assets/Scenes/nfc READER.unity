@@ -35258,6 +35258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397993585}
   - component: {fileID: 397993584}
+  - component: {fileID: 397993587}
   - component: {fileID: 397993583}
   - component: {fileID: 397993582}
   - component: {fileID: 397993586}
@@ -35367,6 +35368,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feestDagButtonParent: {fileID: 1005770319}
+--- !u!114 &397993587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397993581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8364ee16c9ab421468d919262a299205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kidNameInputField: {fileID: 1399697545}
 --- !u!1 &430615811
 GameObject:
   m_ObjectHideFlags: 0
@@ -45407,7 +45421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scanningObject: {fileID: 2038713376}
-  nameInput: {fileID: 1399697547}
+  nameInput: {fileID: 397993587}
 --- !u!114 &502286160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95350,6 +95364,7 @@ MonoBehaviour:
   inputField: {fileID: 1367033283}
   confirmButton: {fileID: 959018370}
   writer: {fileID: 502286159}
+  shower: {fileID: 397993587}
 --- !u!1001 &1403407110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140263,6 +140278,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7400392255154759591, guid: d538ba78303978542a2a39cc39c15d8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -150198,7 +150217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 508511144166711297, guid: d538ba78303978542a2a39cc39c15d8d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1957948950245754973, guid: d538ba78303978542a2a39cc39c15d8d, type: 3}
       propertyPath: m_IsActive

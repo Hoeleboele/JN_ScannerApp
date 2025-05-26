@@ -15,27 +15,29 @@ public class KidNameInput : MonoBehaviour
     [SerializeField]
     private KidWriter writer;
 
+    [SerializeField]
+    private KidNameInputShower shower;
+
     private bool isShowing = false;
 
     public bool IsShowing => isShowing;
 
-    private void Awake()
+    private void OnEnable()
     {
-        confirmButton.onClick.AddListener(OnConfirmClick);
+        confirmButton.onClick.AddListener(OnConfirmClick); 
+        inputField.text = string.Empty;
+        isShowing = true;
+    }
+
+    private void OnDisable()
+    {
+        confirmButton.onClick.RemoveAllListeners();
     }
 
     public void OnConfirmClick()
     {
         writer.AddNameToCode(inputField.text);
-        gameObject.SetActive(false);
         isShowing = false;
-    }
-
-    public void ShowField()
-    {
-        Debug.Log($"input field is showing = {gameObject.activeSelf}");
-        inputField.text = string.Empty;
-        isShowing = true;
-        gameObject.SetActive(true);
+        shower.DeactivateKidNameInput();
     }
 }

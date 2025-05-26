@@ -13,6 +13,8 @@ public class NFCScannerInput : MonoBehaviour
 
     private Cardreader cardreader = new Cardreader();
 
+    bool locked = false;
+
     private void Awake()
     {
         cardreader.CardConnected += Cardreader_CardConnected;
@@ -22,6 +24,11 @@ public class NFCScannerInput : MonoBehaviour
 
     private void Cardreader_CardConnected(object sender, CardreaderEventArgs e)
     {
+        if (locked)
+            return;
+
+        locked = true;
+        
         var cardId = e.Card.Id;
         Channels.ColorChangeChannel.OnCodeScannedRaw?.Invoke(cardId);
         var kid = database.allKids.Find(k => k.Code == e.Card.Id);
@@ -34,6 +41,7 @@ public class NFCScannerInput : MonoBehaviour
 
     private void Cardreader_CardDisconnected(object sender, CardreaderEventArgs e)
     {
+        locked = false;
     }
 
     private void OnDestroy()

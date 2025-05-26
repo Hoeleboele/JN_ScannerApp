@@ -20,7 +20,7 @@ public class KidWriter : MonoBehaviour
     private ScanningObject scanningObject;
 
     [SerializeField]
-    private KidNameInput nameInput;
+    private KidNameInputShower nameInput;
 
     private void OnEnable()
     {
@@ -29,14 +29,25 @@ public class KidWriter : MonoBehaviour
 
     private void OnCodeScannedRaw(string scannedCode)
     {
-        if (scanning && nameInput.IsShowing == false)
+        try
         {
-            Debug.Log($"Code scanned: {scannedCode}");
-
-            this.scannedCode = scannedCode;
-
-            nameInput.ShowField();
+            if (scanning && nameInput.IsShowing == false)
+            {
+                ShowInput(scannedCode);
+                Debug.Log($"Code scanned: {scannedCode}");
+            }
         }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+            Debug.Log(e.Message);
+        }
+    }
+
+    private void ShowInput(string scannedCode)
+    {
+        nameInput.ActivateKidNameInput();
+        this.scannedCode = scannedCode;
     }
 
     public void AddNameToCode(string kidName)
