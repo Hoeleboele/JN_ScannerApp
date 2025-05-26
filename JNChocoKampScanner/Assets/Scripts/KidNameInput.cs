@@ -33,6 +33,7 @@ public class KidNameInput : MonoBehaviour
 
     public void ShowField()
     {
+        Debug.Log($"input field is showing = {gameObject.activeSelf}");
         inputField.text = string.Empty;
         isShowing = true;
         gameObject.SetActive(true);
