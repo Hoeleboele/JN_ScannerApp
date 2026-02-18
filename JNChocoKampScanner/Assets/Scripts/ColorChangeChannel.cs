@@ -8,5 +8,8 @@
 
     public KidScanned OnCodeScanned;
 
+    public KidScanned OnCorrectKidScanned;
+    public KidScanned OnInCorrectKidScanned;
+
     public CodeScanned OnCodeScannedRaw;
 }
