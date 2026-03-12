@@ -173,7 +173,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1117520477469417666}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TopBlock, Assembly-CSharp
         m_MethodName: EnableCollision
         m_Mode: 1
@@ -258,10 +258,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8609550904237145289, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8609550904237145289, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -282,17 +278,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
---- !u!114 &1117520477469417666 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -5988697219714903371, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
-  m_PrefabInstance: {fileID: 2549571132181983863}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93acfb17bd5573b41a36f03efe8321bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TopBlock
 --- !u!224 &6060333824640716478 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8609550904237145289, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}

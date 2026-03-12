@@ -1,23 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TopBlock : MonoBehaviour
 {
-    private bool canCollide = false;
+    [SerializeField]
+    private BoxCollider2D collider;
+    [SerializeField]
+    private List<Image> renderers = new List<Image>();
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (canCollide)
+        if (collision.gameObject.CompareTag("CastleBlock"))
         {
-            if (collision.gameObject.CompareTag("CastleBlock"))
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y + 400, transform.position.z);
-                canCollide = false;
-            }
+            SetObjectInActive(false);
+
+            StartCoroutine(MoveAndSpawn());
         }
     }
 
-    public void EnableCollision()
+    private void SetObjectInActive(bool value)
     {
-        canCollide = true;
+        collider.enabled = value;
+        renderers.ForEach(renderer => renderer.enabled = value);
+    }
+
+    private IEnumerator MoveAndSpawn()
+    {
+        var animator = GetComponent<Animator>();
+        animator.SetTrigger("Hide");
+
+        yield return new WaitForSeconds(0.2f);
+        
+        transform.position = new Vector3(transform.position.x, transform.position.y + 100, transform.position.z);
+        SetObjectInActive(true);
+        animator.SetTrigger("Spawn");
     }
 }
