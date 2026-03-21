@@ -10,14 +10,50 @@ public class TopBlock : MonoBehaviour
     [SerializeField]
     private List<Image> renderers = new List<Image>();
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private int count = 0;
+
+    private float timer = 0f;
+    private bool canSpawn = false;
+    private float respawnTimeDelay = 2f;
+
+    private float initialY;
+    private Animator animator;
+
+    private void Awake()
+    {
+        initialY = transform.position.y;
+        animator = GetComponent<Animator>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("CastleBlock"))
         {
             SetObjectInActive(false);
 
-            StartCoroutine(MoveAndSpawn());
+            Hide();
         }
+    }
+
+    private void Update()
+    {
+        if (canSpawn)
+        {
+            timer += Time.deltaTime;
+            if (timer > respawnTimeDelay)
+            {
+                Spawn();
+                timer = 0f;
+                canSpawn = false;
+            }
+        }
+    }
+
+    public void ResetRespawnTimer()
+    {
+        count++;
+        timer = 0f;
+        canSpawn = true;
     }
 
     private void SetObjectInActive(bool value)
@@ -26,14 +62,14 @@ public class TopBlock : MonoBehaviour
         renderers.ForEach(renderer => renderer.enabled = value);
     }
 
-    private IEnumerator MoveAndSpawn()
+    private void Hide()
     {
-        var animator = GetComponent<Animator>();
         animator.SetTrigger("Hide");
+    }
 
-        yield return new WaitForSeconds(0.2f);
-        
-        transform.position = new Vector3(transform.position.x, transform.position.y + 100, transform.position.z);
+    private void Spawn()
+    {
+        transform.position = new Vector3(transform.position.x, initialY + 100 * count, transform.position.z);
         SetObjectInActive(true);
         animator.SetTrigger("Spawn");
     }

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class BlockSpawner : MonoBehaviour
 {
     [SerializeField]
+    private Transform parentObject;
+    [SerializeField]
     private Transform spawnLocation;
     [SerializeField]
     private CastleBlock blockPrefab;
@@ -20,8 +22,9 @@ public class BlockSpawner : MonoBehaviour
 
     private void SpawnBlock()
     {
-        var block = Instantiate(blockPrefab, spawnLocation);
+        var block = Instantiate(blockPrefab, parentObject);
         block.transform.position = spawnLocation.position;
         spawnedBlocks.Add(block);
+        spawnLocation.position += new Vector3(0, 100, 0);
     }
 }

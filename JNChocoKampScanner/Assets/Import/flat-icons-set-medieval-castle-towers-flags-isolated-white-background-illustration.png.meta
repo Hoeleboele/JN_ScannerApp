@@ -192,12 +192,12 @@ TextureImporter:
       name: Top
       rect:
         serializedVersion: 2
-        x: 1177
-        y: 1463
-        width: 122
-        height: 254
+        x: 1640
+        y: 1656
+        width: 149
+        height: 207
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,6 +206,50 @@ TextureImporter:
       bones: []
       spriteID: 317aaf76d2c105948abf81a9f1c4d4ef
       internalID: 1599177197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balistra
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 1556
+        width: 121
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5388bb06907aac94b8afcfe676bb15d5
+      internalID: 1911294672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flag
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1550
+        width: 210
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d88f0793c7774743944f46873881fb8
+      internalID: -2124262241
       vertices: []
       indices: 
       edges: []
@@ -226,7 +270,9 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2000.0,"y":2000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      Balistra: 1911294672
       Block_1: -5361280882786295124
+      Flag: -2124262241
       Top: 1599177197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
