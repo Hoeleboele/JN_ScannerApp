@@ -2,37 +2,40 @@ using UnityEngine;
 
 public class ScoreBoardDatabase : MonoBehaviour
 {
-    [SerializeField]
+    #region Singleton
+    public static ScoreBoardDatabase Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        if (database == null)
+        {
+            database = new JsonDatabase();
+        }
+
+        scoreData = database.LoadScore();
+        Debug.Log($"score datas amount loaded: {scoreData?.Length}");
+    }
+    #endregion
+
+
     private IDatabase database;
 
     private ScoreData[] scoreData;
 
     public ScoreData[] ScoreData => scoreData;
 
-    private void Awake()
+    public void UpdateScore(ScoreData[] data)
     {
-        if (database == null)
-        {
-            Debug.LogError("Database reference is not set in ScoreBoardDatabase.");
-        }
-
-        scoreData = database.LoadScore();
-    }
-
-    public void UpdateScore(ScoreData data)
-    {
-        //update the score data with the new score data
-        for (int i = 0; i < scoreData.Length; i++)
-        {
-            if (scoreData[i].color == data.color)
-            {
-                scoreData[i].score = data.score;
-                return;
-            }
-        }
-
-        //if the color is not found in the score data error that its not saved try again
-        Debug.LogError("Color not found in score data. Score not updated.");
+        scoreData = data;
     }
 
     public void SaveScore()

@@ -30,7 +30,6 @@ public class CastleBlock : MonoBehaviour
         if (collision.gameObject.CompareTag("CastleBlock") && canMove)
         {
             canMove = false;
-            Debug.Log("nolog");
             transform.position = collision.gameObject.transform.position + new Vector3(0,100,0);
         }
     }

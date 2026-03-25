@@ -129,6 +129,7 @@ MonoBehaviour:
   parentObject: {fileID: 7409895140965597455}
   spawnLocation: {fileID: 3099824703530674807}
   blockPrefab: {fileID: 3209194974908429625, guid: 542ab9c99d57cc14b939888aa2593e4d, type: 3}
+  colorName: 
 --- !u!222 &6197673729457980707
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -210,19 +211,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1690080767433834708}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1002461956800496422}
-        m_TargetAssemblyTypeName: TopBlock, Assembly-CSharp
-        m_MethodName: ResetRespawnTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &2549571132181983863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -320,17 +309,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
---- !u!114 &1002461956800496422 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3353089047301189969, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
-  m_PrefabInstance: {fileID: 2549571132181983863}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93acfb17bd5573b41a36f03efe8321bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TopBlock
 --- !u!224 &6060333824640716478 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8609550904237145289, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
