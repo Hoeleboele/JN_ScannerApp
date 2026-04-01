@@ -26,12 +26,12 @@ public class ColorChanger : MonoBehaviour
     {
         if (defaultColor.activeSelf)
         {
-            if (scannedKid.IsCorrectCode)
+            if (scannedKid.IsCorrectCode == 1)
             {
                 SwapColor(correctColor);
             }
 
-            if (scannedKid.IsCorrectCode == false)
+            if (scannedKid.IsCorrectCode == 0)
             {
                 SwapColor(wrongColor);
             }

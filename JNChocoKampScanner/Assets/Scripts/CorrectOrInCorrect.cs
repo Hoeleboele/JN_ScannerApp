@@ -10,13 +10,13 @@ public class CorrectOrInCorrect : MonoBehaviour
 
     private void OnCodeScanned(Kid scannedKid)
     {
-        if (scannedKid.IsCorrectCode)
+        if (scannedKid.IsCorrectCode == 0)
         {
-            Channels.ColorChangeChannel.OnCorrectKidScanned?.Invoke(scannedKid);
+            Channels.ColorChangeChannel.OnInCorrectKidScanned?.Invoke(scannedKid);
         }
         else
         {
-            Channels.ColorChangeChannel.OnInCorrectKidScanned?.Invoke(scannedKid);
+            Channels.ColorChangeChannel.OnCorrectKidScanned?.Invoke(scannedKid);
         }
     }
 

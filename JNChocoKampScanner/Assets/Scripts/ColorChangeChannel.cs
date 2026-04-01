@@ -10,6 +10,7 @@
 
     public KidScanned OnCorrectKidScanned;
     public KidScanned OnInCorrectKidScanned;
+    public KidScanned OnInPerfectKidScanned;
 
     public CodeScanned OnCodeScannedRaw;
 }

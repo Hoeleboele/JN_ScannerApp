@@ -4,7 +4,10 @@
     public KidGroup Group { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public bool IsCorrectCode { get; set; }
+    /// <summary>
+    /// 0 = false, 1 = true, 2 = star
+    /// </summary>
+    public int IsCorrectCode { get; set; }
 
     public string KidToString()
     {
@@ -20,8 +23,18 @@
         kid.FirstName = splitKid[1];
         kid.LastName = splitKid[2];
 
-        if (splitKid[3] == "1" || splitKid[3].ToLower() == "true") { kid.IsCorrectCode = true; }
-        else { kid.IsCorrectCode = false; }
+        if (splitKid[3] == "2" || splitKid[3].ToLower() == "star")
+        { 
+            kid.IsCorrectCode = 2;
+        }
+        else if(splitKid[3] == "0" || splitKid[3].ToLower() == "false")
+        { 
+            kid.IsCorrectCode = 0;
+        }
+        else
+        {
+            kid.IsCorrectCode = 1;
+        }
 
         return kid;
     }

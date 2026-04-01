@@ -24,15 +24,15 @@ public class FeestDag : MonoBehaviour
 
     private void OnCodeScanned(Kid scannedKid)
     {
-        if (scannedKid.IsCorrectCode)
-        {
-            correctView.SetActive(true);
-            inCorrectView.SetActive(false);
-        }
-        else
+        if (scannedKid.IsCorrectCode == 0)
         {
             correctView.SetActive(false);
             inCorrectView.SetActive(true);
+        }
+        else
+        {
+            correctView.SetActive(true);
+            inCorrectView.SetActive(false);
         }
 
         StartCoroutine(HideAfterTime());

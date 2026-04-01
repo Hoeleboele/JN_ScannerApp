@@ -52,7 +52,7 @@ public class KidWriter : MonoBehaviour
 
     public void AddNameToCode(string kidName)
     {
-        var kid = new Kid() { Code = scannedCode, Group=KidGroup.Maxioor, FirstName = kidName, LastName = string.Empty, IsCorrectCode = true };
+        var kid = new Kid() { Code = scannedCode, Group=KidGroup.Maxioor, FirstName = kidName, LastName = string.Empty, IsCorrectCode = 1 };
         allCodes.Add(kid);
     }
 

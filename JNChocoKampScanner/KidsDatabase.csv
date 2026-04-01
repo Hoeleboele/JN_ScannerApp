@@ -1,1 +1,4 @@
-Barcode;Group;FirstName;LastName;IsActive
+Barcode;FirstName;LastName;IsActive
+04-6E-C5-22-E7-1C-90;test;;0
+04-2F-DA-22-E7-1C-90;Frans;;1
+04-C7-D9-22-E7-1C-90;Luc;;2

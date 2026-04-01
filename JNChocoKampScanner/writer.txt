@@ -1,3 +1,3 @@
-04-2F-DA-22-E7-1C-90;Maxioor;luc;;True
-04-33-D2-22-E7-1C-90;Maxioor;max;;True
-04-E7-72-1A-3E-61-80;Maxioor;Frans;;True
+04-6E-C5-22-E7-1C-90;test;;1
+04-2F-DA-22-E7-1C-90;Frans;;1
+04-C7-D9-22-E7-1C-90;Luc;;1
