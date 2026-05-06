@@ -1,4 +1,5 @@
 ﻿using Assets.KidsDatabase;
+using Assets.Scripts.NFC_scanner;
 using Lando;
 using Lando.LowLevel;
 using System;
@@ -11,15 +12,13 @@ public class NFCScannerInput : MonoBehaviour
     [SerializeField]
     private ExcelBarcodeDatabase database;
 
-    private Cardreader cardreader = new Cardreader();
-
     bool locked = false;
 
     private void Awake()
     {
-        cardreader.CardConnected += Cardreader_CardConnected;
-        cardreader.CardDisconnected += Cardreader_CardDisconnected;
-        cardreader.StartWatch();
+        CardReader.cardReader.CardConnected += Cardreader_CardConnected;
+        CardReader.cardReader.CardDisconnected += Cardreader_CardDisconnected;
+        CardReader.cardReader.StartWatch();
     }
 
     private void Cardreader_CardConnected(object sender, CardreaderEventArgs e)
@@ -46,9 +45,7 @@ public class NFCScannerInput : MonoBehaviour
 
     private void OnDestroy()
     {
-        cardreader.StopWatch();
-        cardreader.Dispose();
-        cardreader.CardConnected -= Cardreader_CardConnected;
-        cardreader.CardDisconnected -= Cardreader_CardDisconnected;
+        CardReader.cardReader.CardConnected -= Cardreader_CardConnected;
+        CardReader.cardReader.CardDisconnected -= Cardreader_CardDisconnected;
     }
 }

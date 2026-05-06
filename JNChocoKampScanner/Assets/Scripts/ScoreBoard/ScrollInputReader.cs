@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ScrollInputReader : MonoBehaviour
 {
-    private const float speed = 1000f;
+    private const float speed = 2000f;
     [SerializeField]
     private Camera cam;
 

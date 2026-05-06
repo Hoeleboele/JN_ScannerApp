@@ -1,24 +1,29 @@
 {
     "Items": [
         {
-            "score": 18,
+            "score": 21,
             "color": "Blue",
-            "starAmount": 0
+            "starAmount": 5
         },
         {
-            "score": 14,
+            "score": 21,
             "color": "Red",
-            "starAmount": 0
+            "starAmount": 8
         },
         {
-            "score": 18,
+            "score": 20,
             "color": "Yellow",
-            "starAmount": 0
+            "starAmount": 4
         },
         {
-            "score": 28,
+            "score": 20,
             "color": "Green",
-            "starAmount": 0
+            "starAmount": 4
+        },
+        {
+            "score": 19,
+            "color": "Purple",
+            "starAmount": 20
         }
     ]
 }

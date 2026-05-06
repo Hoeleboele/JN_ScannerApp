@@ -5,10 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/ColorReader.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/nfc READER.unity
-    guid: c86f78b5502061f48bdb2d814280812c
+    path: Assets/Scenes/Menu.unity
+    guid: e5b3e18628e08c64aa6450ccd055dddd
+  - enabled: 1
+    path: Assets/Scenes/MiddeleeuwsKamp.unity
+    guid: 49ecb5fe1f5633a4088df688429725ff
+  - enabled: 1
+    path: Assets/Scenes/ScoreBoards.unity
+    guid: 328c22145f4725347a4d3188775e8c9f
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

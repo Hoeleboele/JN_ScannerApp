@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ public class BlockSpawner : MonoBehaviour
     private CastleBlock blockPrefab;
     [SerializeField]
     private string colorName;
+    [SerializeField]
+    private TMP_Text starText;
 
     private List<CastleBlock> spawnedBlocks = new List<CastleBlock>();
     private TopBlock topBlock;
@@ -34,6 +37,7 @@ public class BlockSpawner : MonoBehaviour
     public void SetAmountOfStars(int amount)
     {
         starAmount = amount;
+        starText.text = starAmount.ToString();
     }
 
     public void SpawnBlock()

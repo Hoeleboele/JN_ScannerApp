@@ -130,6 +130,7 @@ MonoBehaviour:
   spawnLocation: {fileID: 3099824703530674807}
   blockPrefab: {fileID: 3209194974908429625, guid: 542ab9c99d57cc14b939888aa2593e4d, type: 3}
   colorName: 
+  starText: {fileID: 1007598361425242837}
 --- !u!222 &6197673729457980707
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -309,6 +310,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
+--- !u!114 &1007598361425242837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3358084642304972962, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
+  m_PrefabInstance: {fileID: 2549571132181983863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!224 &6060333824640716478 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8609550904237145289, guid: 66a1b068e3892ea4d81ed31a762f09fc, type: 3}
