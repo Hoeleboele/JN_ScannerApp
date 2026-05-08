@@ -10,6 +10,9 @@ public class KidNameInput : MonoBehaviour
     private TMP_InputField inputField;
 
     [SerializeField]
+    private TMP_Dropdown dropdown;
+
+    [SerializeField]
     private Button confirmButton;
 
     [SerializeField]
@@ -36,7 +39,7 @@ public class KidNameInput : MonoBehaviour
 
     public void OnConfirmClick()
     {
-        writer.AddNameToCode(inputField.text);
+        writer.AddNameToCode(inputField.text, dropdown.itemText.text);
         isShowing = false;
         shower.DeactivateKidNameInput();
     }

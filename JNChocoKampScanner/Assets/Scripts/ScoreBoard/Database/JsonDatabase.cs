@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using UnityEngine;
 
-public class JsonDatabase : MonoBehaviour, IDatabase
+public class JsonDatabase : IDatabase
 {
     private const string jsonFilePath = "./JsonDatabase.json";
 

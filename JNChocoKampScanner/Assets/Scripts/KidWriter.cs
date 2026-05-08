@@ -50,9 +50,9 @@ public class KidWriter : MonoBehaviour
         this.scannedCode = scannedCode;
     }
 
-    public void AddNameToCode(string kidName)
+    public void AddNameToCode(string kidName, string grouplastname)
     {
-        var kid = new Kid() { Code = scannedCode, Group=KidGroup.Maxioor, FirstName = kidName, LastName = string.Empty, IsCorrectCode = 1 };
+        var kid = new Kid() { Code = scannedCode, Group=KidGroup.Maxioor, FirstName = kidName, LastName = grouplastname, IsCorrectCode = 1 };
         allCodes.Add(kid);
     }
 
