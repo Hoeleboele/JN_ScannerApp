@@ -1,29 +1,29 @@
 {
     "Items": [
         {
-            "score": 31,
-            "color": "Blue",
-            "starAmount": 5
+            "score": 0,
+            "color": "Drakenclub",
+            "starAmount": 0
         },
         {
-            "score": 25,
-            "color": "Red",
-            "starAmount": 8
+            "score": 0,
+            "color": "Kasteelmaatjes",
+            "starAmount": 0
         },
         {
-            "score": 26,
-            "color": "Yellow",
-            "starAmount": 4
+            "score": 0,
+            "color": "Kroonknallers",
+            "starAmount": 0
         },
         {
-            "score": 26,
-            "color": "Green",
-            "starAmount": 4
+            "score": 0,
+            "color": "Powerprinsessen",
+            "starAmount": 0
         },
         {
-            "score": 33,
-            "color": "Purple",
-            "starAmount": 20
+            "score": 0,
+            "color": "Ridderbende",
+            "starAmount": 0
         }
     ]
 }

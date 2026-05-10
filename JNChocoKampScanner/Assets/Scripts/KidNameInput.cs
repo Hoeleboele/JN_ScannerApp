@@ -39,7 +39,7 @@ public class KidNameInput : MonoBehaviour
 
     public void OnConfirmClick()
     {
-        writer.AddNameToCode(inputField.text, dropdown.itemText.text);
+        writer.AddNameToCode(inputField.text, dropdown.options[dropdown.value].text);
         isShowing = false;
         shower.DeactivateKidNameInput();
     }
